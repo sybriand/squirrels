@@ -1,0 +1,25 @@
+Package: squirrels
+Title: Data Analysis Squirrels
+Version: 0.0.0.9000
+Authors@R: 
+    person("Steve", "Briand", , "steve.briand@atih.sante.fr", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0000-0000-0000"))
+Description: Data analysis of squirrels data frame.
+License: MIT + file LICENSE
+Depends: 
+    R (>= 3.5)
+Imports: 
+    glue,
+    stringr
+Suggests: 
+    knitr,
+    readr,
+    rmarkdown,
+    testthat
+VignetteBuilder: 
+    knitr
+Config/fusen/version: 0.7.1
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2

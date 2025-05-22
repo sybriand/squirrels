@@ -1,0 +1,72 @@
+---
+title: "flat_first.Rmd empty"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r development, include=FALSE}
+library(testthat)
+```
+
+<!--
+ You need to run the 'description' chunk in the '0-dev_history.Rmd' file before continuing your code there.
+-->
+
+```{r development-load}
+# Load already included functions if relevant
+pkgload::load_all(export_all = FALSE)
+```
+
+
+# get_df_nrows
+    
+```{r development-get_df_nrows}
+# You can prepare the code of the get_df_nrows() function here
+library(glue)
+df <- mtcars
+nrow <- nrow(df)
+message(glue("Nn observations: {nrow}"))
+return(nrow)
+```
+  
+```{r function-get_df_nrows}
+#' get_df_nrows
+#' 
+#' Compute number of rows
+#' 
+#' @param df data.frame
+#'
+#' @return nrow Number of rows
+#' @importFrom glue glue
+#' @export
+
+get_df_nrows <- function(df){
+  nrow <- nrow(df)
+  message(glue::glue("The dataset is composed of {nrow} observations"))
+  return(nrow) 
+}
+```
+  
+```{r example-get_df_nrows}
+get_df_nrows(df = mtcars)
+```
+  
+```{r tests-get_df_nrows}
+test_that("get_df_nrows works", {
+
+  expect_message(
+    object = get_df_nrows(df = mtcars),
+    regexp = "The dataset is composed of 32 observations"
+    
+  )
+  
+})
+```
+
+
+```{r development-inflate, eval=FALSE}
+# Run but keep eval=FALSE to avoid infinite loop
+# Execute in the console directly
+fusen::inflate(flat_file = "dev/flat_get_info.Rmd", vignette_name = "Minimal")
+```
