@@ -1,3 +1,4 @@
-# squirrels (development version)
+# squirrels 1.0.0
 
 * Initial CRAN submission.
+- coucou

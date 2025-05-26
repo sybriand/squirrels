@@ -1,6 +1,6 @@
 Package: squirrels
 Title: Data Analysis Squirrels
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: 
     person("Steve", "Briand", , "steve.briand@atih.sante.fr", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0000-0000-0000"))
