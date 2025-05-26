@@ -59,6 +59,7 @@ usethis::use_readme_rmd()
 usethis::use_code_of_conduct("contact@fake.com")
 # NEWS
 usethis::use_news_md()
+usethis::use_version(which = "major")
 ```
 
 **From now, you will need to "inflate" your package at least once to be able to use the following commands. Let's go to your flat template, and come back here later if/when needed.**
@@ -143,5 +144,12 @@ checkhelper::use_data_doc("data_demo_squirrels", prefix = "doc_")
 system.file("nyc_squirrels_sample.csv", package = "squirrels")
 
 readr::read_csv(system.file("nyc_squirrels_sample.csv", package = "squirrels"))
+```
+
+
+# creation du script globals.r
+```{r}
+#usethis::use_r("globals")
+#checkhelper::print_globals(quiet = TRUE)
 ```
 
